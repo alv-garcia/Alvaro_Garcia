@@ -19,6 +19,10 @@ usethis::create_github_token()
 
 Token<-"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"
 
+# Remover token atual
+
+Sys.unsetenv("GITHUB_PAT")
+
 
 # Salvar Token
 
@@ -28,6 +32,8 @@ gitcreds::gitcreds_set()
 #Testar as configuracoes
 
 usethis::git_sitrep()
+
+
 
 # Iniciar o controle de versões no RStudio
 
