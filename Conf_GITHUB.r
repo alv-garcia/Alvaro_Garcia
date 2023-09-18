@@ -7,7 +7,7 @@ library(usethis)
 #Configurar o GIT
 usethis::use_git_config(
   # your name
-  user.name = "Alv_garcia",
+  user.name = "alv_garcia",
   # your email used in your GitHub account
   user.email = "alvaro.emannuel42@gmail.com"
 )
@@ -17,7 +17,7 @@ usethis::use_git_config(
 
 usethis::create_github_token()
 
-Token<-"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"
+Token<-"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"
 
 
 # Salvar Token
