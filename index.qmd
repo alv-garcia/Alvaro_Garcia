@@ -1,5 +1,6 @@
 ---
-title: "Alvaro Garcia"
+title: "Blog Pessoal"
+description: 'Este Blog visa compilar projetos, estudos e tutoriais relacionados a análise de dados, mudanças climáticas e meio ambiente'
 listing:
   contents: posts
   sort: "date desc"

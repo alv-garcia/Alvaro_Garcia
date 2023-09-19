@@ -13,5 +13,8 @@
   },
   "posts/01_post/new_post.qmd": {
     "new_post.html": "a41d71ea"
+  },
+  "posts/02_Post/primeiro_post.qmd": {
+    "primeiro_post.html": "6ddd3ba0"
   }
 }
