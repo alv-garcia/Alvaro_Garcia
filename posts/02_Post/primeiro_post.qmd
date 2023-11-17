@@ -19,38 +19,50 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec du
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. **Aliquam feugiat dictum bibendum.** Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. [Fusce luctus](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss) porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.
 
-### 3 - Code
+### 1 - Grafico
 
-This is `inline` code plus a small code chunk.
+Here the @fig-plotly
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+#| label: fig-plotly
+#| fig-cap: "*Caption here"
+#| column: page-inset-right
+#| echo: false
+#| message: false
+
+library(htmlwidgets)
 library(tidyverse)
 library(readxl)
 library(lubridate)
+library(hrbrthemes)
+library(plotly)
 
 mudancas <- read.csv(file = "D:/DEV/012 Blog with Quarto/Alvaro_Garcia/posts/02_Post/climate-change.csv")
 
-glimpse(mudancas)
-
 mudancas %>% 
   filter(Entity == "World") %>% 
-  select(Entity,Date,Temperature.anomaly,SeaLevel = "Average")-> mud_final
+  select(Entity, Date, Temperature.anomaly) %>%
+  mutate(Date = ymd(Date)) %>% 
+  drop_na()-> mud_tratado
 
-mud_final2$yearMonth <- floor_date(mud_final2$Time,unit = "month")
+g<-ggplot(mud_tratado)+
+  geom_line(mapping = aes(x = Date , y= Temperature.anomaly, group = Entity),size= 0.5, color = "forestgreen")+
+  scale_x_date(date_labels = "%Y", date_breaks = "10 years")+
+  labs(y = "Temperature (°C)")+
+  geom_hline(yintercept= 0, color="red", size=.5)+
+  theme_ipsum()
 
-mud_final %>% 
-  mutate(Time = ymd(Date))->mud_final2
+fig<-ggplotly(g) %>% 
+  layout(title = list(text = paste0('Anomalia da temperatura média Global',
+                                    '<br>',
+                                    '<sup>',
+                                    'A temperatura normal é calculada com base na média do período de 1951 - 1980.',
+                                    '</sup>')),
+         xaxis = list(title = "Data"),
+         yaxis = list (title = "Anomalia da Temperatura (°C )"))
 
-
-mud_agre <- mud_final2 %>% 
-  group_by(yearMonth) %>% 
-  summarize(Temperature.anomaly = mean(Temperature.anomaly))
-
-
-ggplot(mud_agre )+
-  geom_line(mapping = aes(x = yearMonth, y= Temperature.anomaly))
-
-
+fig
 ```
 
 ### 3 - Tabsets
