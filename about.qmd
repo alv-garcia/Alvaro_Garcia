@@ -1,8 +1,9 @@
 ---
-title: "Sobre mim"
+title: "Alvaro Garcia"
+comments: false
 image: profile.jpeg
 about:
-  template: jolla
+  template: trestles
   links:
     - icon: linkedin
       text: LinkedIn
@@ -12,6 +13,26 @@ about:
       href: https://github.com/alv-garcia
 ---
 
-Atuo dentro da área de meio ambiente, onde redescobri o desejo que tive durante a faculdade de trabalhar com dados e extrair informações que pudessem ser úteis.
+::: {#hero-heading}
+## Sobre mim
 
-Atualmente trabalho no desenvolvimento de inventários de emissões GEE, gestão das emissões, indicadores de sustentabilidade e de eficiência energética.
+Olá !
+
+Meu nome é Alvaro Garcia, sou apaixonado por dados e as histórias que eles contam ou tem o potencial de construir.
+
+Meu foco tem sido a área de meio ambiente, atuando no desenvolvimento de inventários de emissões GEE, cálculo de indicadores de sustentabilidade, eficiência energética e de desempenho ambiental.
+:::
+
+## Ferramentas
+
+-   Linguagem R de programação
+
+-   Power BI
+
+-   Linguagem Python
+
+## Proeficiência linguística
+
+-   Português (Nativo)
+
+-   Inglês (Avançado)

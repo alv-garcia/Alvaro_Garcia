@@ -11,9 +11,19 @@ editor_options:
   chunk_output_type: console
 ---
 
-# Heading 1
+# A humanidade e sua responsabilidade
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.
+O 6º relatório de mudanças climáticas do IPCC aponta o papel inequívoco das atividades humanas no aquecimento global. A certeza em relação a responsabilidade da humanidade no processo das mudanças climáticas evoluiu a cada relatório, assim como os cenários e números que apontam um desafio cada vez maior para a sociedade na mitigação e adaptação a esse futuro.
+
+| Relatório | Ano  | Papel das atividades humanas                                                                                                                             |
+|-----------|---------|--------------------------------------------------|
+| AR4       | 2007 | Global atmospheric concentrations of carbon dioxide, methane and nitrous oxide have increased markedly **as a result of human activities** since 1750... |
+| AR5       | 2014 | Human influence on the climate system **is clear**...                                                                                                    |
+| AR6       | 2023 | Human activities, principally through emissions of greenhouse gases, **have unequivocally caused global warming**                                        |
+
+: Evolução da responsabilidade antrópica
+
+Buscando explorar as evidências atuais deste fenômeno e o papel dos diferentes países e setores econômicos, construí uma série de visualizações que ajudam a compreender melhor o contexto e panorama deste desafio. As visualizações foram desenvolvidas na linguagem de programação R fazendo uso de seu rico ecossistema de pacotes que expandem suas funcionalidades básicas, notadamente o GGPLOT2 e PLOTLY.
 
 ## Merriweather
 
@@ -21,7 +31,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec du
 
 ### 1 - Grafico
 
-Here the @fig-plotly
+Here the
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
