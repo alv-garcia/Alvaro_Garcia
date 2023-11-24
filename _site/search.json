@@ -4,28 +4,14 @@
     "href": "index.html",
     "title": "Blog Pessoal",
     "section": "",
-    "text": "Mudanças climáticas e dados\n\n\n\n\n\n\n\nMudanças Climáticas\n\n\nAnálises\n\n\n\n\nEsse post busca apresentar dados recentes sobre a atual situação do aquecimento global e a contribuição dos diferentes países\n\n\n\n\n\n\nSep 18, 2023\n\n\nAlvaro Garcia\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nSep 17, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\n  \n\n\n\n\nThis is a dummy blog posts\n\n\n\n\n\n\n\n123\n\n\nSecond Tag\n\n\n\n\nThis is a test post. In this post, I try out different functionalities\n\n\n\n\n\n\nJun 1, 2022\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+    "text": "No matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Alvaro Garcia",
     "section": "",
-    "text": "Olá !\nMeu nome é Alvaro Garcia, sou apaixonado por dados e as histórias que eles contam ou tem o potencial de construir.\nMeu foco tem sido a área de meio ambiente, atuando no desenvolvimento de inventários de emissões GEE, cálculo de indicadores de sustentabilidade, eficiência energética e de desempenho ambiental."
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "Meu nome é Alvaro Garcia, sou apaixonado por dados e as histórias que eles contam ou tem o potencial de construir.\nMeu foco tem sido a área de meio ambiente, atuando no desenvolvimento de inventários de emissões GEE, cálculo de indicadores de sustentabilidade, eficiência energética e de desempenho ambiental."
   },
   {
     "objectID": "posts/01_post/new_post.html",
@@ -56,39 +42,11 @@
     "text": "ggplot(data = gapminder::gapminder, mapping = aes(x = lifeExp, fill = continent)) +\n  stat_density(position = \"identity\", alpha = 0.5)\n\n\n\n\nBla bla bla. This is a caption in the margin. Super cool isn’t it?"
   },
   {
-    "objectID": "posts/02_Post/primeiro_post.html",
-    "href": "posts/02_Post/primeiro_post.html",
-    "title": "Mudanças climáticas e dados",
-    "section": "",
-    "text": "O 6º relatório de mudanças climáticas do IPCC aponta o papel inequívoco das atividades humanas no aquecimento global. A certeza em relação a responsabilidade da humanidade no processo das mudanças climáticas evoluiu a cada relatório, assim como os cenários e números que apontam um desafio cada vez maior para a sociedade na mitigação e adaptação a esse futuro.\n\nEvolução da responsabilidade antrópica\n\n\n\n\n\n\n\nRelatório\nAno\nPapel das atividades humanas\n\n\n\n\nAR4\n2007\nGlobal atmospheric concentrations of carbon dioxide, methane and nitrous oxide have increased markedly as a result of human activities since 1750…\n\n\nAR5\n2014\nHuman influence on the climate system is clear…\n\n\nAR6\n2023\nHuman activities, principally through emissions of greenhouse gases, have unequivocally caused global warming\n\n\n\nBuscando explorar as evidências atuais deste fenômeno e o papel dos diferentes países e setores econômicos, construí uma série de visualizações que ajudam a compreender melhor o contexto e panorama deste desafio. As visualizações foram desenvolvidas na linguagem de programação R fazendo uso de seu rico ecossistema de pacotes que expandem suas funcionalidades básicas, notadamente o GGPLOT2 e PLOTLY.\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\n\nHere the\n\n\n\n\n\n\n\n\n\n\nTransforming OLS estimatesMaximizing likelihood\n\n\n\n\nCode\npreds_lm %&gt;% \n  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +\n  geom_jitter(size = 4, alpha = 0.6) +\n  facet_wrap(vars(species)) +\n  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +\n  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +\n  theme_minimal(base_size = 12) +\n  theme(\n    legend.position = 'top', \n    panel.background = element_rect(color = 'black'),\n    panel.grid.minor = element_blank()\n  ) +\n  labs(\n    x = 'Body mass (in g)',\n    y = 'Bill length (in mm)'\n  )\n\n\n\n\n\n\n\n\n\nCode\nglm.mod &lt;- glm(sex ~ body_mass_g + bill_length_mm + species, family = binomial, data = dat)\n\npreds &lt;- dat %&gt;% \n  mutate(\n    prob.fit = glm.mod$fitted.values,\n    prediction = if_else(prob.fit &gt; 0.5, 'male', 'female'),\n    correct = if_else(sex == prediction, 'correct', 'incorrect')\n  )\n\n\npreds %&gt;% \n  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +\n  geom_jitter(size = 4, alpha = 0.6) +\n  facet_wrap(vars(species)) +\n  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +\n  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +\n  theme_minimal(base_size = 10) +\n  theme(\n    legend.position = 'top', \n    panel.background = element_rect(color = 'black'),\n    panel.grid.minor = element_blank()\n  ) +\n  labs(\n    x = 'Body mass (in g)',\n    y = 'Bill length (in mm)'\n  )\n\n\n\n\n\n\n\n\n\n\n\\[\n\\int_0^1 f(x) \\ dx\n\\]\n\n\n\n\n\n\n\n\ngeom_density(\n  mapping = NULL,\n  data = NULL,\n  stat = \"density\",\n  position = \"identity\",\n  ...,\n  na.rm = FALSE,\n  orientation = NA,\n  show.legend = NA,\n  inherit.aes = TRUE,\n  outline.type = \"upper\"\n)\n\n\nstat_density(\n  mapping = NULL,\n  data = NULL,\n  geom = \"area\",\n  position = \"stack\",\n  ...,\n  bw = \"nrd0\",\n  adjust = 1,\n  kernel = \"gaussian\",\n  n = 512,\n  trim = FALSE,\n  na.rm = FALSE,\n  orientation = NA,\n  show.legend = NA,\n  inherit.aes = TRUE\n)\n\n\n\n\n\n\n\nggplot(data = gapminder::gapminder, mapping = aes(x = lifeExp, fill = continent)) +\n  stat_density(position = \"identity\", alpha = 0.5)\n\n\n\n\nBla bla bla. This is a caption in the margin. Super cool isn’t it?"
-  },
-  {
-    "objectID": "posts/02_Post/primeiro_post.html#merriweather",
-    "href": "posts/02_Post/primeiro_post.html#merriweather",
-    "title": "Mudanças climáticas e dados",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\n\nHere the\n\n\n\n\n\n\n\n\n\n\nTransforming OLS estimatesMaximizing likelihood\n\n\n\n\nCode\npreds_lm %&gt;% \n  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +\n  geom_jitter(size = 4, alpha = 0.6) +\n  facet_wrap(vars(species)) +\n  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +\n  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +\n  theme_minimal(base_size = 12) +\n  theme(\n    legend.position = 'top', \n    panel.background = element_rect(color = 'black'),\n    panel.grid.minor = element_blank()\n  ) +\n  labs(\n    x = 'Body mass (in g)',\n    y = 'Bill length (in mm)'\n  )\n\n\n\n\n\n\n\n\n\nCode\nglm.mod &lt;- glm(sex ~ body_mass_g + bill_length_mm + species, family = binomial, data = dat)\n\npreds &lt;- dat %&gt;% \n  mutate(\n    prob.fit = glm.mod$fitted.values,\n    prediction = if_else(prob.fit &gt; 0.5, 'male', 'female'),\n    correct = if_else(sex == prediction, 'correct', 'incorrect')\n  )\n\n\npreds %&gt;% \n  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +\n  geom_jitter(size = 4, alpha = 0.6) +\n  facet_wrap(vars(species)) +\n  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +\n  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +\n  theme_minimal(base_size = 10) +\n  theme(\n    legend.position = 'top', \n    panel.background = element_rect(color = 'black'),\n    panel.grid.minor = element_blank()\n  ) +\n  labs(\n    x = 'Body mass (in g)',\n    y = 'Bill length (in mm)'\n  )\n\n\n\n\n\n\n\n\n\n\n\\[\n\\int_0^1 f(x) \\ dx\n\\]"
-  },
-  {
-    "objectID": "posts/02_Post/primeiro_post.html#columns",
-    "href": "posts/02_Post/primeiro_post.html#columns",
-    "title": "Mudanças climáticas e dados",
-    "section": "",
-    "text": "geom_density(\n  mapping = NULL,\n  data = NULL,\n  stat = \"density\",\n  position = \"identity\",\n  ...,\n  na.rm = FALSE,\n  orientation = NA,\n  show.legend = NA,\n  inherit.aes = TRUE,\n  outline.type = \"upper\"\n)\n\n\nstat_density(\n  mapping = NULL,\n  data = NULL,\n  geom = \"area\",\n  position = \"stack\",\n  ...,\n  bw = \"nrd0\",\n  adjust = 1,\n  kernel = \"gaussian\",\n  n = 512,\n  trim = FALSE,\n  na.rm = FALSE,\n  orientation = NA,\n  show.legend = NA,\n  inherit.aes = TRUE\n)"
-  },
-  {
-    "objectID": "posts/02_Post/primeiro_post.html#margin-captions",
-    "href": "posts/02_Post/primeiro_post.html#margin-captions",
-    "title": "Mudanças climáticas e dados",
-    "section": "",
-    "text": "ggplot(data = gapminder::gapminder, mapping = aes(x = lifeExp, fill = continent)) +\n  stat_density(position = \"identity\", alpha = 0.5)\n\n\n\n\nBla bla bla. This is a caption in the margin. Super cool isn’t it?"
-  },
-  {
     "objectID": "about.html#sobre-mim",
     "href": "about.html#sobre-mim",
     "title": "Alvaro Garcia",
     "section": "",
-    "text": "Olá !\nMeu nome é Alvaro Garcia, sou apaixonado por dados e as histórias que eles contam ou tem o potencial de construir.\nMeu foco tem sido a área de meio ambiente, atuando no desenvolvimento de inventários de emissões GEE, cálculo de indicadores de sustentabilidade, eficiência energética e de desempenho ambiental."
+    "text": "Meu nome é Alvaro Garcia, sou apaixonado por dados e as histórias que eles contam ou tem o potencial de construir.\nMeu foco tem sido a área de meio ambiente, atuando no desenvolvimento de inventários de emissões GEE, cálculo de indicadores de sustentabilidade, eficiência energética e de desempenho ambiental."
   },
   {
     "objectID": "about.html#ferramentas",

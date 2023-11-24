@@ -4,7 +4,6 @@ date: '2023-09-18'
 author: 'Alvaro Garcia'
 categories: ['Mudanças Climáticas', 'Análises']
 description: 'Esse post busca apresentar dados recentes sobre a atual situação do aquecimento global e a contribuição dos diferentes países'
-date: "5/22/2021"
 draft: true
 execute: 
   message: false

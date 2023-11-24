@@ -8,9 +8,9 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/alvaro-silveira-62a770176/
-    - icon: Envelope fill
+    - icon: envelope
       text: E-mail
-      href: https://is.gd/KX4Pxo
+      href: mailto:alvaroemanuel.silveira@gmail.com?cc=alvaro.emannuel42@gmail.com&subject=CONTATO%20-%20ALVARO%20GARCIA&body=Prezado%2C%20Acessei%20seu%20link%20e%20estou%20entrando%20em%20contato.
     - icon: github
       text: Github
       href: https://github.com/alv-garcia
