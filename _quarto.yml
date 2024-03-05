@@ -7,9 +7,11 @@ website:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        text: Github
+        href: https://github.com/alv-garcia
+      - icon: linkedin
+        text: Linkedin
+        href: https://www.linkedin.com/in/alvaro-silveira-62a770176/
 format:
   html:
     theme: theme.scss
