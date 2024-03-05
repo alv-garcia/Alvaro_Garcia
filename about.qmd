@@ -1,5 +1,5 @@
 ---
-title: "Alvaro Garcia"
+title: "Autor"
 comments: false
 image: profile.jpeg
 about:

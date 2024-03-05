@@ -2,23 +2,23 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Blog Pessoal",
+    "title": "Sustainable DataHub",
     "section": "",
-    "text": "No matching items"
+    "text": "Sustentabilidade e dados\n\n\n\n\n\n\n\nSustentabilidade\n\n\nArtigo\n\n\n\n\nEsse é o primeiro post do Sustainable DataHub - Seja Bem-vindo !\n\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "Alvaro Garcia",
+    "title": "Autor",
     "section": "",
     "text": "Meu nome é Alvaro Garcia, sou apaixonado por dados e as histórias que eles contam ou tem o potencial de construir.\nMeu foco tem sido a área de meio ambiente, atuando no desenvolvimento de inventários de emissões GEE, cálculo de indicadores de sustentabilidade, eficiência energética e de desempenho ambiental."
   },
   {
     "objectID": "posts/01_post/new_post.html",
     "href": "posts/01_post/new_post.html",
-    "title": "This is a dummy blog posts",
+    "title": "Sustentabilidade e dados",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\n\nThis is inline code plus a small code chunk.\n\nlibrary(tidyverse)\n\nggplot(mpg) +\n  geom_jitter(aes(cty, hwy), size = 4, alpha = 0.5) \n\n\n\n\n\n\n\n\nTransforming OLS estimatesMaximizing likelihood\n\n\n\n\nCode\npreds_lm %&gt;% \n  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +\n  geom_jitter(size = 4, alpha = 0.6) +\n  facet_wrap(vars(species)) +\n  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +\n  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +\n  theme_minimal(base_size = 12) +\n  theme(\n    legend.position = 'top', \n    panel.background = element_rect(color = 'black'),\n    panel.grid.minor = element_blank()\n  ) +\n  labs(\n    x = 'Body mass (in g)',\n    y = 'Bill length (in mm)'\n  )\n\n\n\n\n\n\n\n\n\nCode\nglm.mod &lt;- glm(sex ~ body_mass_g + bill_length_mm + species, family = binomial, data = dat)\n\npreds &lt;- dat %&gt;% \n  mutate(\n    prob.fit = glm.mod$fitted.values,\n    prediction = if_else(prob.fit &gt; 0.5, 'male', 'female'),\n    correct = if_else(sex == prediction, 'correct', 'incorrect')\n  )\n\n\npreds %&gt;% \n  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +\n  geom_jitter(size = 4, alpha = 0.6) +\n  facet_wrap(vars(species)) +\n  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +\n  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +\n  theme_minimal(base_size = 10) +\n  theme(\n    legend.position = 'top', \n    panel.background = element_rect(color = 'black'),\n    panel.grid.minor = element_blank()\n  ) +\n  labs(\n    x = 'Body mass (in g)',\n    y = 'Bill length (in mm)'\n  )\n\n\n\n\n\n\n\n\n\n\n\\[\n\\int_0^1 f(x) \\ dx\n\\]\n\n\n\n\n\n\n\n\ngeom_density(\n  mapping = NULL,\n  data = NULL,\n  stat = \"density\",\n  position = \"identity\",\n  ...,\n  na.rm = FALSE,\n  orientation = NA,\n  show.legend = NA,\n  inherit.aes = TRUE,\n  outline.type = \"upper\"\n)\n\n\nstat_density(\n  mapping = NULL,\n  data = NULL,\n  geom = \"area\",\n  position = \"stack\",\n  ...,\n  bw = \"nrd0\",\n  adjust = 1,\n  kernel = \"gaussian\",\n  n = 512,\n  trim = FALSE,\n  na.rm = FALSE,\n  orientation = NA,\n  show.legend = NA,\n  inherit.aes = TRUE\n)\n\n\n\n\n\n\n\nggplot(data = gapminder::gapminder, mapping = aes(x = lifeExp, fill = continent)) +\n  stat_density(position = \"identity\", alpha = 0.5)\n\n\n\n\nBla bla bla. This is a caption in the margin. Super cool isn’t it?"
+    "text": "As mudanças climáticas, a inteligência artificial, a responsabilidade ambiental, a saúde e os direitos humanos são temas incrivelmente complexos que não apenas moldam nosso futuro, mas também nosso presente. Navegar por assuntos tão cruciais e intricados é uma tarefa árdua, mas indispensável. Como fazê-lo? Com dados.\nA compreensão e a discussão de tópicos complexos exigem uma base sólida de informações. Esta ideia pode parecer simples, porém, construir esse alicerce em um mundo tão dinâmico é um desafio significativo.\nÉ um desafio que merece ser enfrentado, pois o futuro, não apenas o nosso, mas o de toda a humanidade, está em jogo. O propósito deste site é fomentar o desenvolvimento da sustentabilidade por meio de uma abordagem embasada em dados para a discussão e resolução de questões vitais.\n\n\nO conceito central deste site é a exploração e o debate dos temas do ESG (Ambientais, Sociais e de Governança) com o apoio da visualização de dados e da criação de tutoriais e projetos de programação relacionados a essa temática."
   },
   {
     "objectID": "posts/01_post/new_post.html#merriweather",
@@ -30,36 +30,50 @@
   {
     "objectID": "posts/01_post/new_post.html#columns",
     "href": "posts/01_post/new_post.html#columns",
-    "title": "This is a dummy blog posts",
+    "title": "Sustentabilidade e dados",
     "section": "",
     "text": "geom_density(\n  mapping = NULL,\n  data = NULL,\n  stat = \"density\",\n  position = \"identity\",\n  ...,\n  na.rm = FALSE,\n  orientation = NA,\n  show.legend = NA,\n  inherit.aes = TRUE,\n  outline.type = \"upper\"\n)\n\n\nstat_density(\n  mapping = NULL,\n  data = NULL,\n  geom = \"area\",\n  position = \"stack\",\n  ...,\n  bw = \"nrd0\",\n  adjust = 1,\n  kernel = \"gaussian\",\n  n = 512,\n  trim = FALSE,\n  na.rm = FALSE,\n  orientation = NA,\n  show.legend = NA,\n  inherit.aes = TRUE\n)"
   },
   {
     "objectID": "posts/01_post/new_post.html#margin-captions",
     "href": "posts/01_post/new_post.html#margin-captions",
-    "title": "This is a dummy blog posts",
+    "title": "Sustentabilidade e dados",
     "section": "",
     "text": "ggplot(data = gapminder::gapminder, mapping = aes(x = lifeExp, fill = continent)) +\n  stat_density(position = \"identity\", alpha = 0.5)\n\n\n\n\nBla bla bla. This is a caption in the margin. Super cool isn’t it?"
   },
   {
     "objectID": "about.html#sobre-mim",
     "href": "about.html#sobre-mim",
-    "title": "Alvaro Garcia",
+    "title": "Autor",
     "section": "",
     "text": "Meu nome é Alvaro Garcia, sou apaixonado por dados e as histórias que eles contam ou tem o potencial de construir.\nMeu foco tem sido a área de meio ambiente, atuando no desenvolvimento de inventários de emissões GEE, cálculo de indicadores de sustentabilidade, eficiência energética e de desempenho ambiental."
   },
   {
     "objectID": "about.html#ferramentas",
     "href": "about.html#ferramentas",
-    "title": "Alvaro Garcia",
+    "title": "Autor",
     "section": "Ferramentas",
     "text": "Ferramentas\n\nLinguagem R de programação\nPower BI\nLinguagem Python"
   },
   {
     "objectID": "about.html#proeficiência-linguística",
     "href": "about.html#proeficiência-linguística",
-    "title": "Alvaro Garcia",
+    "title": "Autor",
     "section": "Proeficiência linguística",
     "text": "Proeficiência linguística\n\nPortuguês (Nativo)\nInglês (Avançado)"
+  },
+  {
+    "objectID": "posts/01_post/new_post.html#section",
+    "href": "posts/01_post/new_post.html#section",
+    "title": "Sustentabilidade e dados",
+    "section": "",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\n\nThis is inline code plus a small code chunk.\n\nlibrary(tidyverse)\n\nggplot(mpg) +\n  geom_jitter(aes(cty, hwy), size = 4, alpha = 0.5) \n\n\n\n\n\n\n\n\nTransforming OLS estimatesMaximizing likelihood\n\n\n\n\nCode\npreds_lm %&gt;% \n  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +\n  geom_jitter(size = 4, alpha = 0.6) +\n  facet_wrap(vars(species)) +\n  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +\n  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +\n  theme_minimal(base_size = 12) +\n  theme(\n    legend.position = 'top', \n    panel.background = element_rect(color = 'black'),\n    panel.grid.minor = element_blank()\n  ) +\n  labs(\n    x = 'Body mass (in g)',\n    y = 'Bill length (in mm)'\n  )\n\n\n\n\n\n\n\n\n\nCode\nglm.mod &lt;- glm(sex ~ body_mass_g + bill_length_mm + species, family = binomial, data = dat)\n\npreds &lt;- dat %&gt;% \n  mutate(\n    prob.fit = glm.mod$fitted.values,\n    prediction = if_else(prob.fit &gt; 0.5, 'male', 'female'),\n    correct = if_else(sex == prediction, 'correct', 'incorrect')\n  )\n\n\npreds %&gt;% \n  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +\n  geom_jitter(size = 4, alpha = 0.6) +\n  facet_wrap(vars(species)) +\n  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +\n  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +\n  theme_minimal(base_size = 10) +\n  theme(\n    legend.position = 'top', \n    panel.background = element_rect(color = 'black'),\n    panel.grid.minor = element_blank()\n  ) +\n  labs(\n    x = 'Body mass (in g)',\n    y = 'Bill length (in mm)'\n  )\n\n\n\n\n\n\n\n\n\n\n\\[\n\\int_0^1 f(x) \\ dx\n\\]"
+  },
+  {
+    "objectID": "posts/01_post/new_post.html#o-caminho-à-frente",
+    "href": "posts/01_post/new_post.html#o-caminho-à-frente",
+    "title": "Sustentabilidade e dados",
+    "section": "",
+    "text": "O conceito central deste site é a exploração e o debate dos temas do ESG (Ambientais, Sociais e de Governança) com o apoio da visualização de dados e da criação de tutoriais e projetos de programação relacionados a essa temática."
   }
 ]

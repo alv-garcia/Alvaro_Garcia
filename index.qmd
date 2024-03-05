@@ -1,6 +1,7 @@
 ---
-title: "Blog Pessoal"
-description: 'Este Blog visa compilar projetos, estudos e tutoriais relacionados a análise de dados, mudanças climáticas e meio ambiente'
+title: "Sustainable DataHub"
+subtitle: 'Sustentabilidade impulsionada por dados.'
+description: 'O objetivo desse site é construir formas de pensar o futuro e o presente com uma abordagem data-driven na  consideração de fatores ESG essenciais para alcançar um futuro sustentável.'
 listing:
   contents: posts
   sort: "date desc"
