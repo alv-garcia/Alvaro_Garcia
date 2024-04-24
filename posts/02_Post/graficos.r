@@ -378,7 +378,62 @@ su
 
 
 
+##-------------------- Historico --------------------------
 
+library(tidyverse)
+library(htmlwidgets)
+library(tidyverse)
+library(readxl)
+library(lubridate)
+library(hrbrthemes)
+library(plotly)
+library(viridis)
+
+emissions_sectors <- read.csv(file = "D:/DEV/012 Blog with Quarto/Alvaro_Garcia/posts/02_Post/emissions_sector.csv")
+
+
+# Tratando os dados
+
+emissions_sectors %>% 
+  filter(Entity=="World") %>% 
+  pivot_longer(cols = Agriculture : bunker.fuels ,
+               names_to = "Setores",
+               values_to = "Emissoes") ->Setores
+
+
+Setores %>% 
+  mutate(
+    Sector = case_when(
+      Setores == "land.use.change.and.forestry" ~ "Mudança do uso do solo e silvicultura",
+      Setores == "Agriculture" ~ "Agricultura",
+      Setores == "Waste" ~ "Resíduos",
+      Setores == "Buildings" ~"Edificações",
+      Setores == "Industry" ~ "Industria",
+      Setores == "manufacturing.and.construction" ~ "Fabricação e construção",
+      Setores == "transport"~ "Transporte",
+      Setores == "electricity.and.heat" ~"Eletricidade e aquecimento",
+      Setores == "Fugitive.emissions.energy.production" ~ "Emissões Fugitivas da produção de energia",
+      Setores == "other.fuel.combustion" ~ "Combustão de outros combustíveis")
+  ) %>% 
+  mutate(Emissions = Emissoes/10^9)-> Setores_trat
+
+
+
+g2<-ggplot(Setores_trat, mapping = aes(x = Year , y = Emissions, fill = Sector))+
+  geom_area(alpha=0.6 , size=.5, colour="white")+
+  scale_y_continuous(label = scales::label_number(suffix = "Bilhões t CO2e"))+
+  scale_fill_viridis(discrete = T ) +
+  theme_ipsum() + 
+  ggtitle("Emissões de CO2 por setores da economia")+
+  guides(fill=guide_legend(title="Setor da economia"))
+
+
+fig2<-ggplotly(g2) %>% 
+  layout(xaxis = list(title = "Ano"),
+         yaxis = list (title = "Emissões de CO2"))
+
+
+fig2
 
 
 

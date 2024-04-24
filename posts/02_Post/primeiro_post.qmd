@@ -18,7 +18,7 @@ editor_options:
 O 6º relatório de mudanças climáticas do IPCC aponta o papel inequívoco das atividades humanas no aquecimento global. A certeza em relação a responsabilidade da humanidade no processo das mudanças climáticas evoluiu a cada relatório, assim como os cenários e números que apontam um desafio cada vez maior para a sociedade na mitigação e adaptação a esse futuro.
 
 | Relatório | Ano  | Papel das atividades humanas                                                                                                                             |
-|-------------|-------------|-----------------------------------------------|
+|---------------|---------------|------------------------------------------|
 | AR4       | 2007 | Global atmospheric concentrations of carbon dioxide, methane and nitrous oxide have increased markedly **as a result of human activities** since 1750... |
 | AR5       | 2014 | Human influence on the climate system **is clear**...                                                                                                    |
 | AR6       | 2023 | Human activities, principally through emissions of greenhouse gases, **have unequivocally caused global warming**                                        |
@@ -292,7 +292,8 @@ O tempo para agir é agora. Limitar o aquecimento global a 1.5°C, como estabele
 Os dados apresentados neste blog são apenas um vislumbre da complexa realidade que enfrentamos. É fundamental que continuemos a explorar e aprofundar nosso conhecimento sobre as mudanças climáticas para que possamos tomar decisões mais conscientes e eficazes.
 
 ## 
-Fontes e referências
+
+## Fontes e referências
 
 O conteúdo desse artigo foi desenvolvido com base nas fontes citadas abaixo, em especial o site Our World in Data. Essas fontes são ótimos pontos de referência para buscar se aprofundar no tema das mudanças climáticas.
 
