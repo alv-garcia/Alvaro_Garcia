@@ -1,10 +1,11 @@
 ---
-title: 'Mudanças climáticas e dados'
-date: '2023-09-18'
+title: 'Mudanlas Climáticas e dados'
+date: '2024-04-23'
 author: 'Alvaro Garcia'
 categories: ['Mudanças Climáticas', 'Análises']
 description: 'Esse post busca apresentar dados recentes sobre a atual situação do aquecimento global e a contribuição dos diferentes países'
-draft: true
+draft: FALSE
+image: "Emission.jpg"
 execute: 
   message: false
   warning: false
@@ -17,7 +18,7 @@ editor_options:
 O 6º relatório de mudanças climáticas do IPCC aponta o papel inequívoco das atividades humanas no aquecimento global. A certeza em relação a responsabilidade da humanidade no processo das mudanças climáticas evoluiu a cada relatório, assim como os cenários e números que apontam um desafio cada vez maior para a sociedade na mitigação e adaptação a esse futuro.
 
 | Relatório | Ano  | Papel das atividades humanas                                                                                                                             |
-|-----------|------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-------------|-------------|-----------------------------------------------|
 | AR4       | 2007 | Global atmospheric concentrations of carbon dioxide, methane and nitrous oxide have increased markedly **as a result of human activities** since 1750... |
 | AR5       | 2014 | Human influence on the climate system **is clear**...                                                                                                    |
 | AR6       | 2023 | Human activities, principally through emissions of greenhouse gases, **have unequivocally caused global warming**                                        |
@@ -26,18 +27,14 @@ O 6º relatório de mudanças climáticas do IPCC aponta o papel inequívoco das
 
 Buscando explorar as evidências atuais deste fenômeno e o papel dos diferentes países e setores econômicos, construí uma série de visualizações que ajudam a compreender melhor o contexto e panorama deste desafio. As visualizações foram desenvolvidas na linguagem de programação R fazendo uso de seu rico ecossistema de pacotes que expandem suas funcionalidades básicas, notadamente o GGPLOT2 e PLOTLY.
 
-## Merriweather
+## Temperaturas anormais
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. **Aliquam feugiat dictum bibendum.** Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. [Fusce luctus](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss) porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.
-
-### 1 - Grafico
-
-Here the
+O aquecimento global se refere ao aumento da **temperatura média global**. Essa variação fora do padrão climático por conta das atividades antrópicas pode ser observado na figura 1 que mostra a anomalia da temperatura do padrão (Baseline) utilizado pela NASA. O aumento, que pode ser observado ao longo de todo o período de análise, é ainda mais alarmante nas **últimas décadas do século XIX e iniciais do século XX.**
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-
+#| fig-cap: "Anomalia da temperatura média global (Fonte dos dados: Met Office Hadley Centre, 2023)"
+#| fig-cap-location: margin
 #| label: fig-plotly
-#| fig-cap: "*Caption here"
 #| column: page-inset-right
 #| echo: false
 #| message: false
@@ -57,156 +54,250 @@ mudancas %>%
   mutate(Date = ymd(Date)) %>% 
   drop_na()-> mud_tratado
 
-g<-ggplot(mud_tratado)+
-  geom_line(mapping = aes(x = Date , y= Temperature.anomaly, group = Entity),size= 0.5, color = "forestgreen")+
+g1<-ggplot(mud_tratado)+
+  geom_line(mapping = aes(x = Date , y= Temperature.anomaly, group = Entity),size= 0.2, color = "darkolivegreen")+
   scale_x_date(date_labels = "%Y", date_breaks = "10 years")+
   labs(y = "Temperature (°C)")+
   geom_hline(yintercept= 0, color="red", size=.5)+
   theme_ipsum()
 
-fig<-ggplotly(g) %>% 
-  layout(title = list(text = paste0('Anomalia da temperatura média Global',
-                                    '<br>',
-                                    '<sup>',
-                                    'A temperatura normal é calculada com base na média do período de 1951 - 1980.',
-                                    '</sup>')),
+fig01<-ggplotly(g1) %>% 
+  layout(title = list(text = paste0('Anomalia da temperatura média Global','<br>','<sup>','A temperatura normal é calculada com base na média do período de 1951 - 1980.','</sup>')),
          xaxis = list(title = "Data"),
          yaxis = list (title = "Anomalia da Temperatura (°C )"))
 
-fig
+fig01
 ```
 
-### 3 - Tabsets
+## O papel de cada país
+
+Conforme apontado pelo Sexto relatório do IPCC, **o papel antrópico** na emissão de gases do efeito estufa é um fator inequívoco para as mudanças climáticas. As principais fontes antrópicas desses gases estão associadas a **queima de combustíveis fósseis**, processos industriais, uso do solo e mudança no uso do solo. <sup>1</sup>
+
+Os gráficos abaixo mostram a evolução das emissões das regiões do planeta e países.
 
 ```{r, echo = F}
 knitr::opts_chunk$set(collapse = T)
 library(tidyverse)
-dat <- palmerpenguins::penguins %>% 
-  filter(!is.na(sex))
+library(htmlwidgets)
+library(tidyverse)
+library(readxl)
+library(lubridate)
+library(hrbrthemes)
+library(plotly)
+library(viridis)
 
-lm.mod <- dat %>%
-  mutate(
-    sex = if_else(sex == 'male', 1, 0),
-  ) %>% 
-  lm(data = ., sex ~ body_mass_g + bill_length_mm + species) 
 
-preds_lm <- dat %>% 
-  mutate(
-    prob.fit = plogis(lm.mod$fitted.values),
-    prediction = if_else(prob.fit > 0.5, 'male', 'female'),
-    correct = if_else(sex == prediction, 'correct', 'incorrect')
-  )
+annual_emissions <- read.csv(file = "D:/DEV/012 Blog with Quarto/Alvaro_Garcia/posts/02_Post/annual-co-emissions-by-region.csv")
+
+annual_emissions %>% 
+  filter(Code =="", Entity %in% c('Africa','Asia','Europe','North America','South America','Oceania','International aviation',
+    'International shipping'),Year>=1850) %>% mutate(Emissions = Annual.COâ...emissions/10^9)->by_continent
 ```
 
 ::: panel-tabset
-### Transforming OLS estimates
+### Evolução das emissões no mundo
 
-```{r}
-#| code-fold: true
-preds_lm %>% 
-  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +
-  geom_jitter(size = 4, alpha = 0.6) +
-  facet_wrap(vars(species)) +
-  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +
-  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +
-  theme_minimal(base_size = 12) +
-  theme(
-    legend.position = 'top', 
-    panel.background = element_rect(color = 'black'),
-    panel.grid.minor = element_blank()
-  ) +
-  labs(
-    x = 'Body mass (in g)',
-    y = 'Bill length (in mm)'
-  )
-```
-
-### Maximizing likelihood
-
-```{r}
-#| code-fold: true
-glm.mod <- glm(sex ~ body_mass_g + bill_length_mm + species, family = binomial, data = dat)
-
-preds <- dat %>% 
-  mutate(
-    prob.fit = glm.mod$fitted.values,
-    prediction = if_else(prob.fit > 0.5, 'male', 'female'),
-    correct = if_else(sex == prediction, 'correct', 'incorrect')
-  )
-
-
-preds %>% 
-  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +
-  geom_jitter(size = 4, alpha = 0.6) +
-  facet_wrap(vars(species)) +
-  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +
-  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +
-  theme_minimal(base_size = 10) +
-  theme(
-    legend.position = 'top', 
-    panel.background = element_rect(color = 'black'),
-    panel.grid.minor = element_blank()
-  ) +
-  labs(
-    x = 'Body mass (in g)',
-    y = 'Bill length (in mm)'
-  )
-```
-:::
-
-#### 4 - Some math stuff
-
-$$
-\int_0^1 f(x) \ dx
-$$
-
-## 2 - Columns
-
-::: {layout="[[1,1]]"}
-```{r}
-#| eval: false
-#| echo: true
-geom_density(
-  mapping = NULL,
-  data = NULL,
-  stat = "density",
-  position = "identity",
-  ...,
-  na.rm = FALSE,
-  orientation = NA,
-  show.legend = NA,
-  inherit.aes = TRUE,
-  outline.type = "upper"
-)
-```
-
-```{r}
-#| eval: false
-#| echo: true
-stat_density(
-  mapping = NULL,
-  data = NULL,
-  geom = "area",
-  position = "stack",
-  ...,
-  bw = "nrd0",
-  adjust = 1,
-  kernel = "gaussian",
-  n = 512,
-  trim = FALSE,
-  na.rm = FALSE,
-  orientation = NA,
-  show.legend = NA,
-  inherit.aes = TRUE
-)
-```
-:::
-
-## 2 - Margin captions
-
-```{r}
-#| fig-cap: "Bla bla bla. This is a caption in the margin. Super cool isn't it?"
+```{r,echo = F}
+#| fig-cap: "Evolução as emissões globais de CO2 (Fonte dos dados: Global Carbon Budget, 2023)"
 #| fig-cap-location: margin
-ggplot(data = gapminder::gapminder, mapping = aes(x = lifeExp, fill = continent)) +
-  stat_density(position = "identity", alpha = 0.5)
+#| label: fig-conti
+#| column: page-inset-right
+#| echo: false
+#| message: false
+
+library(tidyverse)
+library(htmlwidgets)
+library(tidyverse)
+library(readxl)
+library(lubridate)
+library(hrbrthemes)
+library(plotly)
+library(viridis)
+
+annual_emissions <- read.csv(file = "D:/DEV/012 Blog with Quarto/Alvaro_Garcia/posts/02_Post/annual-co-emissions-by-region.csv")
+
+annual_emissions %>% 
+  filter(Code =="", Entity %in% c('Africa','Asia','Europe','North America','South America','Oceania','International aviation',
+    'International shipping'),Year>=1850) %>% mutate(Emissions = Annual.COâ...emissions/10^9)->by_continent
+
+
+
+g2<-ggplot(by_continent, mapping = aes(x = Year , y = Emissions, fill = Entity))+
+  geom_area(alpha=0.6 , size=.5, colour="white")+
+  scale_y_continuous(label = scales::label_number(suffix = " Bilhões t"))+
+  scale_fill_viridis(discrete = T) +
+  theme_ipsum() + 
+  ggtitle("Emissões anuais do mundo de CO2")+
+  guides(fill=guide_legend(title="Região do mundo"))
+
+
+fig2<-ggplotly(g2) %>% 
+  layout(xaxis = list(title = "Ano"),
+         yaxis = list (title = "Emissões de CO2"))
+
+
+fig2
 ```
+
+### Evolução por país
+
+```{r, echo=FALSE}
+#| fig-cap: "Evolução as emissões globais de CO2 por país (Fonte dos dados: Global Carbon Budget, 2023)"
+#| fig-cap-location: margin
+#| label: fig-mapa
+#| column: page-inset-right
+#| echo: false
+#| message: false
+
+library(htmlwidgets)
+library(tidyverse)
+library(readxl)
+library(lubridate)
+library(hrbrthemes)
+library(plotly)
+library(viridis)
+
+
+emissions_countrys <- read.csv(file = "D:/DEV/012 Blog with Quarto/Alvaro_Garcia/posts/02_Post/annual-co-emissions-by-region.csv")
+
+
+# Emissoes em milhares de toneladas de CO2
+emissions_countrys %>% 
+  filter(Code != "", Year %in% c(1950,1960,1970,1980,1990,2000,2010,2020,2022)) %>% 
+  mutate(Emissions = Annual.COâ...emissions/10^3) %>%
+  rename(Country = Entity,iso3 = Code) %>% 
+  select(Country,iso3,Year,Emissions)->Country_data
+  
+# light grey boundaries
+l <- list(color = toRGB("grey"), width = 0.5)
+
+# specify map projection/options
+g <- list(
+  showframe = FALSE,
+  showcoastlines = FALSE,
+  projection = list(type = 'Mercator')
+)
+
+
+
+Country_data %>% filter(Country != "World" , Country !="Antarctica")-> Data_2022
+
+fig <- plot_geo(Data_2022)
+fig <- fig %>% add_trace(type="choropleth",
+  z = Data_2022$Emissions,
+  text = Data_2022$Country,
+  locations = Data_2022$iso3,
+  colorscale="Viridis",
+  frame = Data_2022$Year,
+  marker = list(line = l))
+
+fig <- fig %>% colorbar(title = 'Emissoes anuais', ticksuffix = ' t CO2')
+fig <- fig %>% layout(
+  title = 'Emissoes Mundiais por país desde 1950',
+  geo = g
+)
+
+fig <- fig %>% animation_opts(
+    frame = 100, 
+    transition = 100, 
+    redraw = FALSE
+  )
+
+fig <-fig %>% animation_slider(
+  currentvalue = list(
+    prefix = "Ano "
+  )
+)
+
+fig
+```
+:::
+
+O aumento significativo observado nas emissões de CO2 em dois séculos, passando de **3 bilhões de toneladas** no início da série histórica para **mais de 30 bilhões**, apresenta a evolução do papel da humanidade no processo de aquecimento do planeta. Esse processo que se intensificou no século XX, foi alavancado pelos países desenvolvidos e altamente industrializados. Conforme apresentado na figura 2, o total de emissões associados a cada região do globo apresentou características muito distintas. Embora a Europa e América do Norte tenham sido históricamente grandes emissores, na virada do século XX, a Ásia alcançou o papel mais relevante no cenário global.
+
+## As emissões por setores da economia
+
+O Setor de geração de energia e aquecimento é historicamente o maior emissor de gases do efeito estufa da economia mundial, representado **cerca de 30% das emissões mundiais.** O setor de Transporte é o segundo mais importante, sendo em responsável em 2020 por 7,28 Bilhões de t CO2e, aproximadamente **15 % das emissões globais**. A agricultura e o setor de construções estão em seguida no ranking de contribuição das emissões globais, com **papéis muito próximos** dentro do cenátio mundial.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| fig-cap: "Emissões por setores da economia ( Fonte dos dados: Climate Watch, 2023)"
+#| fig-cap-location: margin
+#| label: fig-setores
+#| column: page-inset-right
+#| echo: false
+#| message: false
+
+library(tidyverse)
+library(htmlwidgets)
+library(tidyverse)
+library(readxl)
+library(lubridate)
+library(hrbrthemes)
+library(plotly)
+library(viridis)
+
+emissions_sectors <- read.csv(file = "D:/DEV/012 Blog with Quarto/Alvaro_Garcia/posts/02_Post/emissions_sector.csv")
+
+
+# Tratando os dados
+
+emissions_sectors %>% 
+  filter(Entity=="World") %>% 
+  pivot_longer(cols = Agriculture : bunker.fuels ,
+               names_to = "Setores",
+               values_to = "Emissoes") ->Setores
+
+
+Setores %>% 
+  mutate(
+    Sector = case_when(
+      Setores == "land.use.change.and.forestry" ~ "Mudança do uso do solo e silvicultura",
+      Setores == "Agriculture" ~ "Agricultura",
+      Setores == "Waste" ~ "Resíduos",
+      Setores == "Buildings" ~"Edificações",
+      Setores == "Industry" ~ "Industria",
+      Setores == "manufacturing.and.construction" ~ "Fabricação e construção",
+      Setores == "transport"~ "Transporte",
+      Setores == "electricity.and.heat" ~"Eletricidade e aquecimento",
+      Setores == "Fugitive.emissions.energy.production" ~ "Emissões Fugitivas da produção de energia",
+      Setores == "other.fuel.combustion" ~ "Combustão de outros combustíveis")
+  ) %>% 
+  mutate(Emissions = Emissoes/10^9)-> Setores_trat
+
+
+
+g2<-ggplot(Setores_trat, mapping = aes(x = Year , y = Emissions, fill = Sector))+
+  geom_area(alpha=0.6 , size=.5, colour="white")+
+  scale_y_continuous(label = scales::label_number(suffix = "Bilhões t CO2e"))+
+  scale_fill_viridis(discrete = T ) +
+  theme_ipsum() + 
+  ggtitle("Emissões de CO2 por setores da economia")+
+  guides(fill=guide_legend(title="Setor da economia"))
+
+
+fig2<-ggplotly(g2) %>% 
+  layout(xaxis = list(title = "Ano"),
+         yaxis = list (title = "Emissões de CO2"))
+
+
+fig2
+```
+
+## **Alerta vermelho: Mudanças climáticas exigem ação imediata e em larga escala**
+
+O Sexto Relatório de Avaliação do IPCC deixa claro: a influência humana no aquecimento global é inequívoca e suas consequências já estão sendo sentidas em todo o planeta. A cada novo relatório, a ciência se torna mais robusta e as projeções, mais alarmantes.
+
+O tempo para agir é agora. Limitar o aquecimento global a 1.5°C, como estabelecido no Acordo de Paris, exige um esforço global sem precedentes. Precisamos reduzir drasticamente as emissões de gases de efeito estufa nos próximos anos, investir em fontes de energia renovável e desenvolver tecnologias inovadoras para mitigar e nos adaptarmos às mudanças climáticas.
+
+Os dados apresentados neste blog são apenas um vislumbre da complexa realidade que enfrentamos. É fundamental que continuemos a explorar e aprofundar nosso conhecimento sobre as mudanças climáticas para que possamos tomar decisões mais conscientes e eficazes.
+
+## 
+Fontes e referências
+
+O conteúdo desse artigo foi desenvolvido com base nas fontes citadas abaixo, em especial o site Our World in Data. Essas fontes são ótimos pontos de referência para buscar se aprofundar no tema das mudanças climáticas.
+
+1.  Our World in Data - CO₂ and Greenhouse Gas Emissions - [Acesse por aqui](https://ourworldindata.org/co2-and-greenhouse-gas-emissions#all-charts)
+
+2.  Sexto Relatório de Avaliação do IPCC: Mudança Climática 2022 - [Acesse por aqui](https://www.unep.org/pt-br/resources/relatorios/sexto-relatorio-de-avaliacao-do-ipcc-mudanca-climatica-2022)
+
+3.  Painel intergovernamental de mudanças Climáticas - IPCC - [Acesse por aqui](https://www.ipcc.ch/)

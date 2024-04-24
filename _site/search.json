@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Sustainable DataHub",
     "section": "",
-    "text": "Sustentabilidade e dados\n\n\n\n\n\n\n\nSustentabilidade\n\n\nArtigo\n\n\n\n\nEsse é o primeiro post do Sustainable DataHub - Seja Bem-vindo !\n\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Mudanlas Climáticas e dados\n\n\n\n\n\n\n\nMudanças Climáticas\n\n\nAnálises\n\n\n\n\nEsse post busca apresentar dados recentes sobre a atual situação do aquecimento global e a contribuição dos diferentes países\n\n\n\n\n\n\nApr 23, 2024\n\n\nAlvaro Garcia\n\n\n\n\n\n\n  \n\n\n\n\nSustentabilidade e dados\n\n\n\n\n\n\n\nSustentabilidade\n\n\nArtigo\n\n\n\n\nEsse � o primeiro post do Sustainable DataHub - Seja Bem-vindo !\n\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -18,7 +18,7 @@
     "href": "posts/01_post/new_post.html",
     "title": "Sustentabilidade e dados",
     "section": "",
-    "text": "As mudanças climáticas, a inteligência artificial, a responsabilidade ambiental, a saúde e os direitos humanos são temas incrivelmente complexos que não apenas moldam nosso futuro, mas também nosso presente. Navegar por assuntos tão cruciais e intricados é uma tarefa árdua, mas indispensável. Como fazê-lo? Com dados.\nA compreensão e a discussão de tópicos complexos exigem uma base sólida de informações. Esta ideia pode parecer simples, porém, construir esse alicerce em um mundo tão dinâmico é um desafio significativo.\nÉ um desafio que merece ser enfrentado, pois o futuro, não apenas o nosso, mas o de toda a humanidade, está em jogo. O propósito deste site é fomentar o desenvolvimento da sustentabilidade por meio de uma abordagem embasada em dados para a discussão e resolução de questões vitais.\n\n\nO conceito central deste site é a exploração e o debate dos temas do ESG (Ambientais, Sociais e de Governança) com o apoio da visualização de dados e da criação de tutoriais e projetos de programação relacionados a essa temática."
+    "text": "As mudanças climáticas, a inteligência artificial, a responsabilidade ambiental, a saúde e os direitos humanos são temas incrivelmente complexos que não apenas moldam nosso futuro, mas também nosso presente. Navegar por assuntos tão cruciais e intricados é uma tarefa árdua, mas indispensável. Como fazê-lo? Com dados.\nA compreensão e a discussão de tópicos complexos exigem uma base sólida de informações. Esta ideia pode parecer simples, porém, construir esse alicerce em um mundo tão dinâmico é um desafio significativo.\n� um desafio que merece ser enfrentado, pois o futuro, não apenas o nosso, mas o de toda a humanidade, está em jogo. O propósito deste site é fomentar o desenvolvimento da sustentabilidade por meio de uma abordagem embasada em dados para a discussão e resolução de questões vitais.\n\n\nO conceito central deste site é a exploração e o debate dos temas do ESG (Ambientais, Sociais e de Governança) com o apoio da visualização de dados e da criação de tutoriais e projetos de programação relacionados a essa temática."
   },
   {
     "objectID": "posts/01_post/new_post.html#merriweather",
@@ -75,5 +75,61 @@
     "title": "Sustentabilidade e dados",
     "section": "",
     "text": "O conceito central deste site é a exploração e o debate dos temas do ESG (Ambientais, Sociais e de Governança) com o apoio da visualização de dados e da criação de tutoriais e projetos de programação relacionados a essa temática."
+  },
+  {
+    "objectID": "posts/02_Post/primeiro_post.html",
+    "href": "posts/02_Post/primeiro_post.html",
+    "title": "Mudanlas Climáticas e dados",
+    "section": "",
+    "text": "O 6º relatório de mudanças climáticas do IPCC aponta o papel inequívoco das atividades humanas no aquecimento global. A certeza em relação a responsabilidade da humanidade no processo das mudanças climáticas evoluiu a cada relatório, assim como os cenários e números que apontam um desafio cada vez maior para a sociedade na mitigação e adaptação a esse futuro.\n\nEvolução da responsabilidade antrópica\n\n\n\n\n\n\n\nRelatório\nAno\nPapel das atividades humanas\n\n\n\n\nAR4\n2007\nGlobal atmospheric concentrations of carbon dioxide, methane and nitrous oxide have increased markedly as a result of human activities since 1750…\n\n\nAR5\n2014\nHuman influence on the climate system is clear…\n\n\nAR6\n2023\nHuman activities, principally through emissions of greenhouse gases, have unequivocally caused global warming\n\n\n\nBuscando explorar as evidências atuais deste fenômeno e o papel dos diferentes países e setores econômicos, construí uma série de visualizações que ajudam a compreender melhor o contexto e panorama deste desafio. As visualizações foram desenvolvidas na linguagem de programação R fazendo uso de seu rico ecossistema de pacotes que expandem suas funcionalidades básicas, notadamente o GGPLOT2 e PLOTLY.\n\n\nO aquecimento global se refere ao aumento da temperatura média global. Essa variação fora do padrão climático por conta das atividades antrópicas pode ser observado na figura 1 que mostra a anomalia da temperatura do padrão (Baseline) utilizado pela NASA. O aumento, que pode ser observado ao longo de todo o período de análise, é ainda mais alarmante nas últimas décadas do século XIX e iniciais do século XX.\n\n\n\n\n\nFigure 1: Anomalia da temperatura média global (Fonte dos dados: Met Office Hadley Centre, 2023)\n\n\n\n\n\n\nConforme apontado pelo Sexto relatório do IPCC, o papel antrópico na emissão de gases do efeito estufa é um fator inequívoco para as mudanças climáticas. As principais fontes antrópicas desses gases estão associadas a queima de combustíveis fósseis, processos industriais, uso do solo e mudança no uso do solo. 1\nOs gráficos abaixo mostram a evolução das emissões das regiões do planeta e países.\n\nEvolução das emissões no mundoEvolução por país\n\n\n\n\n\n\n\nFigure 2: Evolução as emissões globais de CO2 (Fonte dos dados: Global Carbon Budget, 2023)\n\n\n\n\n\n\n\n\n\n\nFigure 3: Evolução as emissões globais de CO2 por país (Fonte dos dados: Global Carbon Budget, 2023)\n\n\n\n\n\n\nO aumento significativo observado nas emissões de CO2 em dois séculos, passando de 3 bilhões de toneladas no início da série histórica para mais de 30 bilhões, apresenta a evolução do papel da humanidade no processo de aquecimento do planeta. Esse processo que se intensificou no século XX, foi alavancado pelos países desenvolvidos e altamente industrializados. Conforme apresentado na figura 2, o total de emissões associados a cada região do globo apresentou características muito distintas. Embora a Europa e América do Norte tenham sido históricamente grandes emissores, na virada do século XX, a Ásia alcançou o papel mais relevante no cenário global.\n\n\n\nO Setor de geração de energia e aquecimento é historicamente o maior emissor de gases do efeito estufa da economia mundial, representado cerca de 30% das emissões mundiais. O setor de Transporte é o segundo mais importante, sendo em responsável em 2020 por 7,28 Bilhões de t CO2e, aproximadamente 15 % das emissões globais. A agricultura e o setor de construções estão em seguida no ranking de contribuição das emissões globais, com papéis muito próximos dentro do cenátio mundial.\n\n\n\n\n\nFigure 4: Emissões por setores da economia ( Fonte dos dados: Climate Watch, 2023)\n\n\n\n\n\n\nO Sexto Relatório de Avaliação do IPCC deixa claro: a influência humana no aquecimento global é inequívoca e suas consequências já estão sendo sentidas em todo o planeta. A cada novo relatório, a ciência se torna mais robusta e as projeções, mais alarmantes.\nO tempo para agir é agora. Limitar o aquecimento global a 1.5°C, como estabelecido no Acordo de Paris, exige um esforço global sem precedentes. Precisamos reduzir drasticamente as emissões de gases de efeito estufa nos próximos anos, investir em fontes de energia renovável e desenvolver tecnologias inovadoras para mitigar e nos adaptarmos às mudanças climáticas.\nOs dados apresentados neste blog são apenas um vislumbre da complexa realidade que enfrentamos. É fundamental que continuemos a explorar e aprofundar nosso conhecimento sobre as mudanças climáticas para que possamos tomar decisões mais conscientes e eficazes.\n\n\nFontes e referências\nO conteúdo desse artigo foi desenvolvido com base nas fontes citadas abaixo, em especial o site Our World in Data. Essas fontes são ótimos pontos de referência para buscar se aprofundar no tema das mudanças climáticas.\n\nOur World in Data - CO₂ and Greenhouse Gas Emissions - Acesse por aqui\nSexto Relatório de Avaliação do IPCC: Mudança Climática 2022 - Acesse por aqui\nPainel intergovernamental de mudanças Climáticas - IPCC - Acesse por aqui"
+  },
+  {
+    "objectID": "posts/02_Post/primeiro_post.html#temperaturas-anormais",
+    "href": "posts/02_Post/primeiro_post.html#temperaturas-anormais",
+    "title": "Mudanlas Climáticas e dados",
+    "section": "",
+    "text": "O aquecimento global se refere ao aumento da temperatura média global. Essa variação fora do padrão climático por conta das atividades antrópicas pode ser observado na figura 1 que mostra a anomalia da temperatura do padrão (Baseline) utilizado pela NASA. O aumento, que pode ser observado ao longo de todo o período de análise, é ainda mais alarmante nas últimas décadas do século XIX e iniciais do século XX.\n\n\n\n\n\nFigure 1: Anomalia da temperatura média global (Fonte dos dados: Met Office Hadley Centre, 2023)"
+  },
+  {
+    "objectID": "posts/02_Post/primeiro_post.html#o-papel-de-cada-país",
+    "href": "posts/02_Post/primeiro_post.html#o-papel-de-cada-país",
+    "title": "Mudanlas Climáticas e dados",
+    "section": "",
+    "text": "Conforme apontado pelo Sexto relatório do IPCC, o papel antrópico na emissão de gases do efeito estufa é um fator inequívoco para as mudanças climáticas. As principais fontes antrópicas desses gases estão associadas a queima de combustíveis fósseis, processos industriais, uso do solo e mudança no uso do solo. 1\nOs gráficos abaixo mostram a evolução das emissões das regiões do planeta e países.\n\nEvolução das emissões no mundoEvolução por país\n\n\n\n\n\n\n\nFigure 2: Evolução as emissões globais de CO2 (Fonte dos dados: Global Carbon Budget, 2023)\n\n\n\n\n\n\n\n\n\n\nFigure 3: Evolução as emissões globais de CO2 por país (Fonte dos dados: Global Carbon Budget, 2023)\n\n\n\n\n\n\nO aumento significativo observado nas emissões de CO2 em dois séculos, passando de 3 bilhões de toneladas no início da série histórica para mais de 30 bilhões, apresenta a evolução do papel da humanidade no processo de aquecimento do planeta. Esse processo que se intensificou no século XX, foi alavancado pelos países desenvolvidos e altamente industrializados. Conforme apresentado na figura 2, o total de emissões associados a cada região do globo apresentou características muito distintas. Embora a Europa e América do Norte tenham sido históricamente grandes emissores, na virada do século XX, a Ásia alcançou o papel mais relevante no cenário global."
+  },
+  {
+    "objectID": "posts/02_Post/primeiro_post.html#columns",
+    "href": "posts/02_Post/primeiro_post.html#columns",
+    "title": "Mudanlas Climáticas e dados",
+    "section": "",
+    "text": "geom_density(\n  mapping = NULL,\n  data = NULL,\n  stat = \"density\",\n  position = \"identity\",\n  ...,\n  na.rm = FALSE,\n  orientation = NA,\n  show.legend = NA,\n  inherit.aes = TRUE,\n  outline.type = \"upper\"\n)\n\n\nstat_density(\n  mapping = NULL,\n  data = NULL,\n  geom = \"area\",\n  position = \"stack\",\n  ...,\n  bw = \"nrd0\",\n  adjust = 1,\n  kernel = \"gaussian\",\n  n = 512,\n  trim = FALSE,\n  na.rm = FALSE,\n  orientation = NA,\n  show.legend = NA,\n  inherit.aes = TRUE\n)"
+  },
+  {
+    "objectID": "posts/02_Post/primeiro_post.html#margin-captions",
+    "href": "posts/02_Post/primeiro_post.html#margin-captions",
+    "title": "Mudanlas Climáticas e dados",
+    "section": "",
+    "text": "ggplot(data = gapminder::gapminder, mapping = aes(x = lifeExp, fill = continent)) +\n  stat_density(position = \"identity\", alpha = 0.5)\n\n\n\n\nBla bla bla. This is a caption in the margin. Super cool isn’t it?"
+  },
+  {
+    "objectID": "posts/01_post/new_post.html#o-caminho-a-frente",
+    "href": "posts/01_post/new_post.html#o-caminho-a-frente",
+    "title": "Sustentabilidade e dados",
+    "section": "",
+    "text": "O conceito central deste site é a exploração e o debate dos temas do ESG (Ambientais, Sociais e de Governança) com o apoio da visualização de dados e da criação de tutoriais e projetos de programação relacionados a essa temática."
+  },
+  {
+    "objectID": "posts/02_Post/primeiro_post.html#as-emissões-por-setores-da-economia",
+    "href": "posts/02_Post/primeiro_post.html#as-emissões-por-setores-da-economia",
+    "title": "Mudanlas Climáticas e dados",
+    "section": "",
+    "text": "O Setor de geração de energia e aquecimento é historicamente o maior emissor de gases do efeito estufa da economia mundial, representado cerca de 30% das emissões mundiais. O setor de Transporte é o segundo mais importante, sendo em responsável em 2020 por 7,28 Bilhões de t CO2e, aproximadamente 15 % das emissões globais. A agricultura e o setor de construções estão em seguida no ranking de contribuição das emissões globais, com papéis muito próximos dentro do cenátio mundial.\n\n\n\n\n\nFigure 4: Emissões por setores da economia ( Fonte dos dados: Climate Watch, 2023)"
+  },
+  {
+    "objectID": "posts/02_Post/primeiro_post.html#alerta-vermelho-mudanças-climáticas-exigem-ação-imediata-e-em-larga-escala",
+    "href": "posts/02_Post/primeiro_post.html#alerta-vermelho-mudanças-climáticas-exigem-ação-imediata-e-em-larga-escala",
+    "title": "Mudanlas Climáticas e dados",
+    "section": "",
+    "text": "O Sexto Relatório de Avaliação do IPCC deixa claro: a influência humana no aquecimento global é inequívoca e suas consequências já estão sendo sentidas em todo o planeta. A cada novo relatório, a ciência se torna mais robusta e as projeções, mais alarmantes.\nO tempo para agir é agora. Limitar o aquecimento global a 1.5°C, como estabelecido no Acordo de Paris, exige um esforço global sem precedentes. Precisamos reduzir drasticamente as emissões de gases de efeito estufa nos próximos anos, investir em fontes de energia renovável e desenvolver tecnologias inovadoras para mitigar e nos adaptarmos às mudanças climáticas.\nOs dados apresentados neste blog são apenas um vislumbre da complexa realidade que enfrentamos. É fundamental que continuemos a explorar e aprofundar nosso conhecimento sobre as mudanças climáticas para que possamos tomar decisões mais conscientes e eficazes.\n\n\nFontes e referências\nO conteúdo desse artigo foi desenvolvido com base nas fontes citadas abaixo, em especial o site Our World in Data. Essas fontes são ótimos pontos de referência para buscar se aprofundar no tema das mudanças climáticas.\n\nOur World in Data - CO₂ and Greenhouse Gas Emissions - Acesse por aqui\nSexto Relatório de Avaliação do IPCC: Mudança Climática 2022 - Acesse por aqui\nPainel intergovernamental de mudanças Climáticas - IPCC - Acesse por aqui"
   }
 ]

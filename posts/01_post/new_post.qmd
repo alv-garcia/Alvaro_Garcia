@@ -3,7 +3,7 @@ title: 'Sustentabilidade e dados'
 date: '2024-03-04'
 categories: ['Sustentabilidade', 'Artigo']
 image: "Eolico.jpg"
-description: 'Esse é o primeiro post do Sustainable DataHub - Seja Bem-vindo !'
+description: 'Esse � o primeiro post do Sustainable DataHub - Seja Bem-vindo !'
 draft: FALSE
 execute: 
   message: false
@@ -18,8 +18,8 @@ As mudanças climáticas, a inteligência artificial, a responsabilidade ambient
 
 A compreensão e a discussão de tópicos complexos exigem uma base sólida de informações. Esta ideia pode parecer simples, porém, construir esse alicerce em um mundo tão dinâmico é um desafio significativo.
 
-É um desafio que merece ser enfrentado, pois o futuro, não apenas o nosso, mas o de toda a humanidade, está em jogo. O propósito deste site é fomentar o desenvolvimento da sustentabilidade por meio de uma abordagem embasada em dados para a discussão e resolução de questões vitais.
+� um desafio que merece ser enfrentado, pois o futuro, não apenas o nosso, mas o de toda a humanidade, está em jogo. O propósito deste site é fomentar o desenvolvimento da sustentabilidade por meio de uma abordagem embasada em dados para a discussão e resolução de questões vitais.
 
-## **O Caminho à Frente**
+## **O Caminho a Frente**
 
 O conceito central deste site é a exploração e o debate dos temas do ESG (Ambientais, Sociais e de Governança) com o apoio da visualização de dados e da criação de tutoriais e projetos de programação relacionados a essa temática.
