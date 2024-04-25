@@ -291,14 +291,12 @@ O tempo para agir é agora. Limitar o aquecimento global a 1.5°C, como estabele
 
 Os dados apresentados neste blog são apenas um vislumbre da complexa realidade que enfrentamos. É fundamental que continuemos a explorar e aprofundar nosso conhecimento sobre as mudanças climáticas para que possamos tomar decisões mais conscientes e eficazes.
 
-## 
-
 ## Fontes e referências
 
 O conteúdo desse artigo foi desenvolvido com base nas fontes citadas abaixo, em especial o site Our World in Data. Essas fontes são ótimos pontos de referência para buscar se aprofundar no tema das mudanças climáticas.
 
-1.  Our World in Data - CO₂ and Greenhouse Gas Emissions - [Acesse por aqui](https://ourworldindata.org/co2-and-greenhouse-gas-emissions#all-charts)
+1.  Our World in Data - CO₂ and Greenhouse Gas Emissions - [Acesse aqui](https://ourworldindata.org/co2-and-greenhouse-gas-emissions#all-charts)
 
-2.  Sexto Relatório de Avaliação do IPCC: Mudança Climática 2022 - [Acesse por aqui](https://www.unep.org/pt-br/resources/relatorios/sexto-relatorio-de-avaliacao-do-ipcc-mudanca-climatica-2022)
+2.  Sexto Relatório de Avaliação do IPCC: Mudança Climática 2022 - [Acesse aqui](https://www.unep.org/pt-br/resources/relatorios/sexto-relatorio-de-avaliacao-do-ipcc-mudanca-climatica-2022)
 
-3.  Painel intergovernamental de mudanças Climáticas - IPCC - [Acesse por aqui](https://www.ipcc.ch/)
+3.  Painel intergovernamental de mudanças Climáticas - IPCC - [Acesse aqui](https://www.ipcc.ch/)
