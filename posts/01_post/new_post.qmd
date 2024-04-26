@@ -1,6 +1,6 @@
 ---
 title: 'Sustentabilidade e dados'
-date: '2024-03-04'
+date: '2024-04-04'
 categories: ['Sustentabilidade', 'Artigo']
 image: "Eolico.jpg"
 description: 'Esse é o primeiro post do Sustainable DataHub - Seja Bem-vindo !'
