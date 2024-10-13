@@ -1,0 +1,14 @@
+---
+title: 'Certificações Ambientais'
+date: '2024-04-30'
+author: 'Alvaro Garcia'
+categories: ['Mudanças Climáticas', 'Análises']
+description: 'Uma lista das principais certificações'
+draft: TRUE
+image: "Emission.jpg"
+execute: 
+  message: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+---
