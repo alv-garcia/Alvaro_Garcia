@@ -4,6 +4,7 @@ library(tidyverse)
 library(readr)
 library(grid)
 library(shadowtext)
+library(waffle)
 
 
 path <- "D:/DEV/012 Blog with Quarto/Alvaro_Garcia/posts/04_Post/"
@@ -60,5 +61,26 @@ plt <- plt +
     )
   )
 plt
+
+
+
+waffle()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
