@@ -1,0 +1,18 @@
+---
+title: 'Top 100 Empresas mais Sustentáveis'
+date: '2024-10-17'
+author: 'Alvaro Garcia'
+categories: ['Sustentabilidade', 'Análises']
+description: 'O que as empresas mais Sutentáveis do mundo podem nos dizer sobre ESG no mundo Corporativo ?'
+draft: TRUE
+image: "Emission.jpg"
+execute: 
+  message: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+---
+
+# Top 100 Empresas mais Sustentáveis
+
+O 6º relatório de mudanças climáticas do IPCC aponta o papel inequívoco das atividades humanas no aquecimento global. A certeza em relação a responsabilidade da humanidade no processo das mudanças climáticas evoluiu a cada relatório, assim como os cenários e números que apontam um desafio cada vez maior para a sociedade na mitigação e adaptação a esse futuro.
