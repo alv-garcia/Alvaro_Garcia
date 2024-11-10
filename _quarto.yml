@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Sustainable DataHub"
+  open-graph: true
   navbar:
     right:
       - about.qmd
