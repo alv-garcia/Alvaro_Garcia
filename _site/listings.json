@@ -5,5 +5,9 @@
       "/posts/02_Post/primeiro_post.html",
       "/posts/01_post/new_post.html"
     ]
+  },
+  {
+    "listing": "/book_club.html",
+    "items": []
   }
 ]

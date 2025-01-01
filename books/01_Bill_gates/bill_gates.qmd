@@ -1,0 +1,38 @@
+---
+title: 'Como Evitar Um Desatre Climático ?'
+date: '2024-12-12'
+author: 'Alvaro Garcia'
+categories: ['Mudanças Climáticas']
+description: 'Esse post busca apresentar dados recentes sobre a atual situação do aquecimento global e a contribuição dos diferentes países'
+draft: TRUE
+toc: true
+title-block-banner: "#f0f3f5"
+image: "desastre_climatico.png"
+execute: 
+  message: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+---
+
+![](Topo.png){fig-align="center"}
+
+# A humanidade e sua responsabilidade
+
+O 6º relatório de mudanças climáticas do IPCC aponta o papel inequívoco das atividades humanas no aquecimento global. A certeza em relação a responsabilidade da humanidade no processo das mudanças climáticas evoluiu a cada relatório, assim como os cenários e números que apontam um desafio cada vez maior para a sociedade na mitigação e adaptação a esse futuro.
+
+| Relatório | Ano  | Papel das atividades humanas                                                                                                                             |
+|-------------|-------------|-----------------------------------------------|
+| AR4       | 2007 | Global atmospheric concentrations of carbon dioxide, methane and nitrous oxide have increased markedly **as a result of human activities** since 1750... |
+| AR5       | 2014 | Human influence on the climate system **is clear**...                                                                                                    |
+| AR6       | 2023 | Human activities, principally through emissions of greenhouse gases, **have unequivocally caused global warming**                                        |
+
+[![](LINK.png)](https://amzn.to/4fgH2Pu)
+
+## Fontes e referências
+
+1.  Our World in Data - CO₂ and Greenhouse Gas Emissions - [Acesse aqui](https://ourworldindata.org/co2-and-greenhouse-gas-emissions#all-charts)
+
+2.  Sexto Relatório de Avaliação do IPCC: Mudança Climática 2022 - [Acesse aqui](https://www.unep.org/pt-br/resources/relatorios/sexto-relatorio-de-avaliacao-do-ipcc-mudanca-climatica-2022)
+
+3.  Painel intergovernamental de mudanças Climáticas - IPCC - [Acesse aqui](https://www.ipcc.ch/)

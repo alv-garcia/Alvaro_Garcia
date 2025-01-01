@@ -3,10 +3,11 @@ project:
 
 website:
   title: "Sustainable DataHub"
-  open-graph: true
+  open-graph: TRUE
   navbar:
     right:
       - about.qmd
+      - book_club.qmd
       - icon: github
         text: Github
         href: https://github.com/alv-garcia

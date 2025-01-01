@@ -1,10 +1,9 @@
 ---
-title: "Sustainable DataHub"
-subtitle: 'Sustentabilidade impulsionada por dados.'
+title: "Clube do Livro"
+subtitle: 'Livros de ESG e Dados recomendados e resumidos'
 description: 'O objetivo desse site é construir formas de pensar o futuro e o presente com uma abordagem data-driven na  consideração de fatores ESG essenciais para alcançar um futuro sustentável.'
-image: "Emission.jpg"
 listing:
-  contents: posts
+  contents: books
   sort: "date desc"
   type: default
   categories: true
