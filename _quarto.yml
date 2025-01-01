@@ -3,7 +3,10 @@ project:
 
 website:
   title: "Sustainable DataHub"
-  open-graph: TRUE
+  open-graph: true
+  twitter-card: true
+  favicon: D:/DEV/012 Blog with Quarto/Alvaro_Garcia
+  site-url: https://www.sustainabledatahub.com
   navbar:
     right:
       - about.qmd
