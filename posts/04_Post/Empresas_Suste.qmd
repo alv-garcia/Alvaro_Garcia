@@ -1,10 +1,12 @@
 ---
 title: 'Top 100 Empresas mais Sustentáveis'
-date: '2024-12-19'
+date: '2025-01-06'
 author: 'Alvaro Garcia'
-categories: ['Sustentabilidade', 'Análises']
+categories: ['Sustentabilidade','ODS 09','ODS 13']
 description: 'O que as empresas mais Sutentáveis do mundo podem nos dizer sobre ESG no mundo Corporativo ?'
-draft: TRUE
+draft: False
+toc: true
+title-block-banner: "#f0f3f5"
 image: "Imagem Central - Mapa - Empresas.png"
 execute: 
   message: false
@@ -21,17 +23,44 @@ Esse vai ser o primeiro de uma série de posts que buscam explorar os dados dess
 
 ## Quais os setores econômicos presentes no Ranking ?
 
-O Ranking conta com empresas de **11 setores econômicos** de diferentes industrias e atividades. O setor de **Tecnologia da Informação** foi o mais representativo, seguido do **setor Financeiro**. Este último tem um histórico associado a adoção de critérios ESG como forma de ajudar a mitigar riscos e identificar **oportunidades sustentáveis**, ocasionando resultados financeiros mais robustos e seguros a longo prazo.
+O Ranking conta com empresas de **11 setores econômicos** de diferentes industrias e atividades. O setor de **Tecnologia da Informação** foi o mais representativo, seguido do **setor Financeiro**. Embora a pauta ESG venha se tornando cada vez mais relevante, ela não é tão nova quanto parece, já na década de 1970 existiam fundos de investimento com características ESG na Europa e EUA <sup>1</sup>.
 
-Embora a pauta ESG venha se tornando cada vez mais relevante, ela não é tão nova quanto parece, já na década de 1970 existiam fundos com características ESG na Europa e EUA <sup>1</sup>.
+![Número de Empresas por Setor - Fonte: Alvaro Silveira Dados: Corporate Knights.](01%20Empresas-Setores.png)
 
-![](01%20Empresas-Setores.png)
+O setor Financeiro tem um histórico associado a adoção de critérios ESG como forma de ajudar a mitigar riscos e identificar **oportunidades sustentáveis**, ocasionando resultados financeiros mais robustos e seguros a longo prazo. Devido a sua importância no desenvolvimento de novos empreendimento, ele também atua como **impulsionador dessas soluções**.
+
+Dentro do setor da Tecnologia da Informação, as **industrias de Semicondutores e equipamentos eletrônicos** constituem a maior parte das empresas listadas. Os semicondutores estão presentes nos mais diversos dispositivos utilizados no dia a dia como Smartsphones, Televisores, Notebooks , TV, além de suas aplicações industriais diversas. Essa atividade, no entanto, é **marcadamente intensiva no consumo de energia e recursos naturais**, entre eles a água.
+
+![Empresas de Tecnologia da Informação - Fonte: Alvaro Silveira Dados: Corporate Knights.](02%20Empresas%20-%20Tecnologia.png)
+
+A importância dessa cadeia produtiva para o mundo moderno e seus impactos tornam essencial o avanço na descarbonização de suas atividades. Nesse sentido, essa indústria motivada pela crescente perceção dos consumidores finais e clientes diretos sobre o **impacto das emissões ao longo de todo o ciclo de vida dos produtos** eletrônicos tem desenvolvido estratégias para estreitar laços com fornecedores e parceiros, estabelecer programas de abatimento de emissões e de **redução de emissões de escopo 3** de sua cadeia de suprimentos <sup>2</sup>.
+
+## Os Países e o Ranking
+
+A maior parte das empresas da lista são de **países desenvolvidos**, principalmente da América do Norte e Europa. Entre os três países com mais empresas se encontra também a **China**, inclusive com muitas empresas do setor de Tecnologia da Informação.
 
 ::: panel-tabset
+### Mapa de Distribuição no mundo
+
+![Distribuição das empresas no mundo - Fonte: Alvaro Silveira Dados: Corporate Knights.](03%20Empresas%20-%20Mapa.png){fig-align="left"}
+
+### Gráfico de Blocos dos Países
+
+![Distribuição das empresas no mundo - Fonte: Alvaro Silveira Dados: Corporate Knights.](04%20-%20Mapa%20-%20Empresas.png)
 :::
+
+A relevante presença da China nessa lista também apresenta um de seus grandes desafios: A China tem **liderado a transição energética no mundo**, no entanto, ainda é extremamente dependente da produção de **energia de combustíveis fosséis** <sup>3</sup>. O País tem grandes desafios para alcançar a descarbonização de sua economia mas já obteve resultados impressionantes em relação ao controle da poluição, como o controle da qualidade do ar.
+
+## Conclusões
+
+**O ranking das 100 empresas mais sustentáveis revela um cenário global em constante evolução em direção a práticas mais responsáveis e ambientalmente corretas.** A predominância de setores como tecnologia da informação e financeiro demonstra a crescente importância da sustentabilidade para esses setores estratégicos da economia e seu papel em como impulsionador ou ator dentro de diferentes cadeias produtivas.
+
+Em próximos posts serão explorados os indicadores associados a equidade de gênero e mudanças climáticas dessas organizações.
+
+------------------------------------------------------------------------
 
 ### Referências
 
 1.  O Impacto do ESG no Mercado Financeiro - [Acesse](https://dotgroup.com.br/educacao/o-impacto-do-esg-no-mercado-financeiro/)
-2.  https://www2.deloitte.com/us/en/pages/consulting/articles/addressing-scope-3-emissions-in-the-semiconductor-industry.html
-3.  https://www.powerelectronicsnews.com/sustainability-in-the-semiconductor-industry/
+2.  Semiconductor sustainability: Efforts across the value chain - [Acesso](https://www2.deloitte.com/us/en/pages/consulting/articles/addressing-scope-3-emissions-in-the-semiconductor-industry.html)
+3.  Como a China conseguiu cortar pela metade a poluição do ar em 7 anos - [Acesso](https://www.bbc.com/portuguese/internacional-62053174)
