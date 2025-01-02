@@ -9,6 +9,8 @@
   },
   {
     "listing": "/book_club.html",
-    "items": []
+    "items": [
+      "/books/01_Bill_gates/bill_gates.html"
+    ]
   }
 ]

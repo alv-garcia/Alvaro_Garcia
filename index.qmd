@@ -1,8 +1,8 @@
 ---
 title: "Sustainable DataHub"
 subtitle: 'Sustentabilidade impulsionada por dados.'
-description: 'O objetivo desse site é construir formas de pensar o futuro e o presente com uma abordagem data-driven na  consideração de fatores ESG essenciais para alcançar um futuro sustentável.'
-image: "Emission.jpg"
+description: 'O objetivo desse site é construir formas de pensar o futuro e o presente com uma abordagem data-driven na  consideração de fatores ESG essenciais para alcançar um futuro sustentável'
+image: Emission.jpg
 listing:
   contents: posts
   sort: "date desc"
