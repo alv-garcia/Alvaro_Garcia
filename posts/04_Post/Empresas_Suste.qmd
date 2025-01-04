@@ -3,7 +3,7 @@ title: 'Top 100 Empresas mais Sustentáveis'
 date: '2025-01-06'
 author: 'Alvaro Garcia'
 categories: ['Sustentabilidade','ODS 09','ODS 13']
-description: 'O que as empresas mais Sutentáveis do mundo podem nos dizer sobre ESG no mundo Corporativo ?'
+description: 'O que as empresas mais Sustentáveis do mundo podem nos dizer sobre ESG no mundo Corporativo ?'
 draft: False
 toc: true
 title-block-banner: "#f0f3f5"
