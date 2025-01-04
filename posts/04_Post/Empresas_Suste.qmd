@@ -17,7 +17,7 @@ editor_options:
 
 # Top 100 Empresas mais Sustentáveis
 
-O Ranking das empresas mais Sustentáveis, criando em 2005 pela plataforma Corporate Knights, oferece um vislumbre sobre as empresas que estão em constante expansão em torno de soluções verdes. Com uma metodologia própria de categorização e classificação, esse ranking permite uma visão das companhias que estão traçando um caminho de sucesso para uma economia de baixo carbono.
+O Ranking das empresas mais Sustentáveis, criado em 2005 pela plataforma Corporate Knights, oferece um vislumbre sobre as empresas que estão em constante expansão em torno de soluções verdes. Com uma metodologia própria de categorização e classificação, esse ranking permite uma visão das companhias que estão traçando um caminho de sucesso para uma economia de baixo carbono.
 
 Esse vai ser o primeiro de uma série de posts que buscam explorar os dados dessas empresas, identificando as características e práticas que as tornam referências. No site da [Corporate Knights](https://www.corporateknights.com/rankings/global-100-rankings/2024-global-100-rankings/the-20th-annual-global-100/) é possível acessar a lista completa e informações assim como uma explicação da metodologia utilizada.
 
